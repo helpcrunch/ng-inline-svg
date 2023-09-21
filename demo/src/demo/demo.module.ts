@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from '@helpcrunch/ng-inline-svg';
 
 import { DemoComponent } from './demo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [DemoComponent],

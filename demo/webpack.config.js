@@ -21,7 +21,7 @@ module.exports = {
   
   resolve: {
     modules: [path.join(__dirname, 'node_modules')],
-    extensions: ['.js', '.ts', '.scss', '.html']
+    extensions: ['.js', '.mjs', '.ts', '.scss', '.html']
   },
 
   module: {
@@ -31,22 +31,7 @@ module.exports = {
         exclude: [/node_modules\//],
         loader: 'ts-loader'
       },
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                'sourceMap': true,
-                'importLoaders': 1
-              }
-            },
-            'sass-loader'
-          ]
-        })
-      }
+      { test: /\.mjs$/, include: /node_modules/, type: 'javascript/auto' }
     ]
   },
 
@@ -54,10 +39,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: root('public/index.html'),
       inject: true
-    }),
-
-    new ExtractTextPlugin({
-      filename: 'css/[name].css'
     }),
 
     new CopyWebpackPlugin([{
