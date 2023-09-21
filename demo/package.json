@@ -26,7 +26,7 @@
     "es6-shim": "^0.35.6",
     "@helpcrunch/ng-inline-svg": "github:helpcrunch/ng-inline-svg",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.3",
+    "rxjs": "^7.0.0",
     "zone.js": "~0.13.1"
   },
   "devDependencies": {

@@ -5,12 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './demo.template.html',
 })
 export class DemoComponent implements OnInit {
-  private _showOther: boolean = false;
-  private _attrs = {
+  public _showOther: boolean = false;
+  public _attrs = {
     'width': '50',
     'height': '50'
   };
-  private _changeAttrs = {
+  public _changeAttrs = {
     'width': '50',
     'height': '50'
   };
